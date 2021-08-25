@@ -1,0 +1,25 @@
+<div class="album   ">
+    <div class="col-12 py-4">
+        <h1 class="display-5 text-center font-weight-bold">Estudiantes</h1>
+    </div>
+    <div class="container bg-image " style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCFVZLukSYQmXYDXJMBQWahaAKwgq1-L2TgA&usqp=CAU');" >
+        
+        <div class="row d-flex justify-content-center align-items-center h-50 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 gradient-custom-3" > 
+           
+            <div class="col-3 col-md-3 col-lg-3 col-xl-3 mt-4 mb-4 ml-1" *ngFor="let u of usuarios">
+                <div class="card testimonial-card" style="width: 18rem;">
+                    <div class="card-up aqua-gradient"></div>
+                    <div class="avatar mx-auto white">
+                        <img src="https://www.vhv.rs/dpng/d/138-1382352_icono-persona-png-iconos-de-personas-transparent-png.png" class="rounded-circle img-fluid">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 style="margin-top: 30px;" *ngIf="usuarios.length == 0">No ningun dato que mostrar</h5>
+                        <h5 class="card-title font-weight-bold"> {{u.nombre}}</h5>
+                        <p class="card-text"><i class="fas fa-quote-left"></i>   {{ u.direccion }}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
